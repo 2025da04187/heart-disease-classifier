@@ -1,6 +1,7 @@
 a. **Problem Statement :**
 
-The objective of this project is to build a machine learning classification pipeline to predict whether a patient has a risk of a heart disease or attack based on their medical history and lifestyle indicators. By deploying an interactive web application, medical professionals or users can evaluate patient data against multiple trained models to predict cardiovascular risks effectively.
+The objective of this project is to build a machine learning classification pipeline to predict whether a patient has a risk of a heart disease or attack based on their medical history and lifestyle indicators. 
+By deploying an interactive web application, medical professionals or users can evaluate patient data against multiple trained models to predict cardiovascular risks effectively.
 
 ----
 
@@ -16,17 +17,23 @@ Instances: 253,680 (A representative subset is used for test evaluation)
 
 Target Variable: HeartDiseaseorAttack (Binary: 0 = No Heart Disease, 1 = Heart Disease)
 
-Criteria Check: Features (21 >= 12), Instances (253,680 >= 500).
+Criteria Check: Features (21 >= 12), Instances (200,000 >= 500).
 
 ----
 
 c. **Github Repository Link :**
 
-[Insert your GitHub Repo Link Here]
+https://github.com/2025da04187/heart-disease-classifier.git
 
 ----
 
-d. **Models Used:**
+d. **Streamlit App Link :**
+
+https://heart-disease-classifier-2025da04187.streamlit.app/
+
+----
+
+e. **Models Used:**
 
 Logistic Regression
 
@@ -42,32 +49,32 @@ Support Vector Machine (SVM)
 
 ----
 
-e. **Comparison Table :**
+f. **Comparison Table :**
 
-|ML Model Name | Accuracy | AUC | Precision | Recall | F1 Score | MCC|
-|--------------|----------|-----|-----------|--------|----------|----|
-|Logistic Regression|0.908|0.841|0.534|0.165|0.252|0.258|
-|Decision Tree|0.854|0.602|0.264|0.281|0.272|0.185|
-|K-Nearest Neighbor|0.896|0.725|0.395|0.134|0.200|0.178|
-|Naive Bayes (Gaussian)|0.835|0.812|0.315|0.502|0.387|0.301|
-|Random Forest|0.906|0.836|0.505|0.125|0.200|0.215|
-|Support Vector Machine|0.910|0.815|0.562|0.145|0.230|0.250|
-
-----
-
-f. **Observations Table :**
-
-|ML Model Name | Observation about model performance|
-|--------------|------------------------------------|
-|Logistic Regression| Provided strong overall accuracy and the highest AUC, showing reliable probability estimations for cardiovascular risks.|
-|Decision Tree| Showed lower overall accuracy and AUC, indicating a tendency to overfit the training data despite capturing complex rules. |
-|K-Nearest Neighbor| Performed decently on accuracy but suffered from low recall, meaning it struggled to correctly identify actual positive heart disease cases. |
-|Naive Bayes (Gaussian)| Achieved the highest Recall and MCC. Though overall accuracy dropped, it proved best at identifying true positive risk cases.|
-|Random Forest| Exhibited excellent accuracy and AUC by reducing the variance of decision trees, but precision/recall balance was slightly skewed towards the majority class. |
-|Support Vector Machine| Yielded the highest absolute accuracy. However, similar to RF, it was conservative, resulting in high precision but low recall. |
+|ML Model Name | Accuracy | AUC    | Precision | Recall | F1 Score | MCC    |
+|--------------|----------|--------|-----------|--------|----------|--------|
+|Logistic Regression| 0.9103   | 0.851  | 0.5652    | 0.1402 | 0.2246   | 0.2499 |
+|Decision Tree| 0.9073   | 0.5947 | 0.5000    | 0.0836 | 0.1432   | 0.1762 |
+|K-Nearest Neighbor| 0.8998   | 0.716  | 0.3929    | 0.1482 | 0.2153   | 0.197  |
+|Naive Bayes (Gaussian)| 0.8295   | 0.8065 | 0.2855    | 0.558  | 0.3777   | 0.3127 |
+|Random Forest| 0.9062   | 0.8139 | 0.4474    | 0.0458 | 0.0831   | 0.1197 |
+|Support Vector Machine| 0.9077   | 0.6878 | 0.5294    | 0.0485 | 0.0889   | 0.1394 |
 
 ----
 
-g. **Model Training :**
+g. **Observations Table :**
+
+|ML Model Name | Observation about model performance                                                                                                                                                                                                      |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Logistic Regression| Provided strong overall accuracy and the highest AUC, showing reliable probability estimations for cardiovascular risks.                                                                                                                 |
+|Decision Tree| Showed high raw accuracy but worst AUC, second lowest recall, Extremely poor performance at finding true positive cases despite capturing complex rules.                                                                                 |
+|K-Nearest Neighbor| Performed decently on accuracy but suffered from relatively low precision and recall. Meaning it struggled to correctly identify actual positive heart disease cases. Suffers from a high number of false positives and false negatives. |
+|Naive Bayes (Gaussian)| Lowest overall Accuracy and precision. Strong AUC score, but highest recall by a huge margin. Good model to use if finding positive cases is the main priority.                                                                          |
+|Random Forest| Exhibited High baseline accuracy, and good AUC score. Lowest recall score, and worst F1 score. Severely struggles to catch positive cases.                                                                                               |
+|Support Vector Machine| Yielded the highest absolute accuracy and decent precision. However, resulting in high precision but low recall and AU score. Fails to successfully identify most positive instances.                                                                                                           |
+
+----
+
+h. **Model Training :**
 
 The python script model_training.py is used to train and generate multiple model files. It also generates test csv file.
