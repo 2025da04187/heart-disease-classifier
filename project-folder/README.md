@@ -13,7 +13,7 @@ Source: Kaggle - https://www.kaggle.com/datasets/alexteboul/heart-disease-health
 
 Features: 21 independent features (including HighBP, HighChol, BMI, Smoker, Stroke, Diabetes, etc.)
 
-Instances: 253,680 (A representative subset is used for test evaluation)
+Instances: 200,000 (A representative subset is used for test evaluation)
 
 Target Variable: HeartDiseaseorAttack (Binary: 0 = No Heart Disease, 1 = Heart Disease)
 
