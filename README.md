@@ -65,3 +65,9 @@ f. **Observations Table :**
 |Naive Bayes (Gaussian)| Achieved the highest Recall and MCC. Though overall accuracy dropped, it proved best at identifying true positive risk cases.|
 |Random Forest| Exhibited excellent accuracy and AUC by reducing the variance of decision trees, but precision/recall balance was slightly skewed towards the majority class. |
 |Support Vector Machine| Yielded the highest absolute accuracy. However, similar to RF, it was conservative, resulting in high precision but low recall. |
+
+----
+
+g. **Model Training :**
+
+The python script model_training.py is used to train and generate multiple model files. It also generates test csv file.
