@@ -50,8 +50,8 @@ if uploaded_file is not None:
 
         try:
             # Load Scaler & Model
-            scaler = joblib.load('model/scaler.pkl')
-            model = joblib.load(os.path.join('model', model_file_mapping[model_choice]))
+            scaler = joblib.load('project-folder/model/scaler.pkl')
+            model = joblib.load(os.path.join('project-folder/model', model_file_mapping[model_choice]))
 
             # Preprocess test data
             X_test_scaled = scaler.transform(X_test)
